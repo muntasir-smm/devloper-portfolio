@@ -134,7 +134,9 @@ section{
 }
 .skill{
     background: #ffffff;
-    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 60px -16px teal;  */
+    /* Box shadow offset-x 60px offset-y -16px blur 0px */
+    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 30px;
 }
