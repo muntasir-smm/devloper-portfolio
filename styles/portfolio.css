@@ -2,9 +2,9 @@
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
 }
-/* .full-body{
-    margin: 30px;
-} */
+.full-body{
+    margin: 20px;
+}
 .text-primary {
     color: #fd6e0a;
 }
@@ -35,6 +35,10 @@
 }
 
 /* Header and navigation styles */
+.profile-pic{
+    height: 50%;
+    width: 50%;
+}
 .header{
     background: #fff8f3;
     background-image: url(../images/header_bg.png), url(../images/developer.png);
