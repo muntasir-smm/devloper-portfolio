@@ -35,9 +35,10 @@
 }
 
 /* Header and navigation styles */
-.profile-pic{
-    height: 50%;
-    width: 50%;
+.banner .profile-pic{
+    height: 600px;
+    width: 600px;
+
 }
 .header{
     background: #fff8f3;
