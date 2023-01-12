@@ -6,7 +6,13 @@
     margin: 20px;
 }
 .text-primary {
-    color: #fd6e0a;
+    color: #00ff00;
+}
+.text-primary-r{
+    color: #ff0000;
+}
+.text-primary-2{
+    color: #00aaff;
 }
 
 .btn-primary {
@@ -64,8 +70,8 @@ nav ul {
 }
 
 .nav-title {
-    font-weight: 800;
-    font-size: 45px;
+    font-weight: 900;
+    font-size: 44px;
 }
 
 /* Banner style */
@@ -90,6 +96,8 @@ nav ul {
     color: #757575;
     font-size: 18px;
     margin-bottom: 30px;
+    text-align:justify;
+    padding: 10px;
 }
 /* main section */
 main{
@@ -153,6 +161,7 @@ section{
 }
 .skill-description{
     color: #757575;
+    text-align: justify;
 }
 
 /* Resume Styles */
@@ -176,6 +185,12 @@ section{
 .resume .description{
     color: #757575;
 }
+.resume-title{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: underline 3px wavy #fd6e0a;
+}
 .resume-item{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -183,6 +198,10 @@ section{
 .resume-button{
     margin-top: 50px;
     text-align: center;
+}
+.exprience{
+    /* visibility: hidden; */
+    display: none;
 }
 
 /* Contact Style  */
@@ -198,7 +217,7 @@ section{
 .contact input[type="text"], input[type="email"], textarea{
     margin-bottom: 24px;
     border: none;
-    width: 100%;
+    width: 95%;
     padding: 18px 30px;
 }
 
@@ -213,10 +232,10 @@ input{
 /* Smaller device */
 
 @media screen and (max-width: 576px) {
-    .header{
-        /* background-image: none; */
+    /* .header{
+        background-image: none;
     }
-    
+     */
     nav,
     nav ul,
     .banner,
@@ -249,6 +268,10 @@ input{
     }
     nav li{
         margin-left: 0px;
+    }
+
+    .btn-txt{
+        font-size:14px;
     }
 }
 
