@@ -1,299 +1,34 @@
-* {
-    margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+/* Custom styles that Tailwind doesn't cover */
+
+/* Skill card hover effects */
+.skill-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-.full-body{
-    margin: 20px;
-}
-.text-primary {
-    color: #00ff00;
-}
-.text-primary-r{
-    color: #ff0000;
-}
-.text-primary-2{
-    color: #00aaff;
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-.btn-primary {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 20px;
-    height: 64px;
-    border: 0px;
-    padding: 18px 35px;
-    border-radius: 5px;
-    background: #fd6e0a;
+/* Social links hover effect */
+.social-link {
+  transition: transform 0.3s ease;
 }
-.btn-contact{
-    box-sizing: border-box;
-    color: #fd6e0a;
-    font-weight: 700;
-    font-size: 20px;
-    height: 64px;
-    border: 1px solid #fd6e0a;
-    padding: 18px 35px;
-    border-radius: 5px;
-}
-.top-btn{
-    display: flex;
-    gap: 30px;
+.social-link:hover {
+  transform: translateY(-3px);
 }
 
-/* Header and navigation styles */
-.banner .profile-pic{
-    height: 600px;
-    width: 600px;
-
-}
-.header{
-    background: #fff8f3;
-    background-image: url(../images/header_bg.png), url(../images/developer.png);
-    background-repeat: no-repeat;
-    background-position: bottom right, left;
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 200px;
-}
-
-nav li {
-    list-style: none;
-    margin-left: 50px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-}
-
-.nav-title {
-    font-weight: 900;
-    font-size: 44px;
-}
-
-/* Banner style */
-.banner{
-    margin: 0px 200px;
-    display: flex;
-    align-items: center;
-}
-
-.banner-title{
-    font-weight: 700;
-    font-size: 85px;
-}
-
-.banner-sub-title{
-    font-weight: 600;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.banner-description{
-    color: #757575;
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-align:justify;
-    padding: 10px;
-}
-/* main section */
-main{
-    max-width: 1140px;
-    margin: 0px auto;
-}
-section{
-    margin-top: 130px;
-}
-/* About section styles */
-.about{
-    text-align: center;
-    background: #fff8f3;
-    border-radius: 10px;
-    padding: 130px 150px;
-}
-.section-title{
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 35px;
-    font-weight: 700;
-}
-.section-description{
-    color: #757575;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.about-info-container{
-    display: flex;
-    justify-content: space-around;
-}
-.about .info-title{
-    font-size: 20px;
-    counter-reset: #757575;
-}
-.info-description{
-    font-weight: 700;
-    font-size: 20px;
-    color: #474747;
-}
-
-/* What I Do styles */
-.skills-container{
-    display: flex;
-    gap: 24px;
-}
-.skill{
-    background: #ffffff;
-    /* box-shadow: 60px -16px teal;  */
-    /* Box shadow offset-x 60px offset-y -16px blur 0px */
-    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
-    padding: 30px;
-}
-.skill-title{
-    font-weight: 700;
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-.skill-description{
-    color: #757575;
-    text-align: justify;
-}
-
-/* Resume Styles */
-.resume-content{
-    display: flex;
-    gap: 24px;
-}
-
-.resume .title{
-    color: #474747;
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-.resume .sub-title{
-    color: #757575;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.resume .description{
-    color: #757575;
-}
-.resume-title{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: underline 3px wavy #fd6e0a;
-}
-.resume-item{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.resume-button{
-    margin-top: 50px;
-    text-align: center;
-}
-.exprience{
-    /* visibility: hidden; */
-    display: none;
-}
-
-/* Contact Style  */
-.contact{
-    display: flex;
-    gap: 100px;
-    background: #fff8f3;
-    padding: 130px 200px;
-}
-.contact .section-title{
-    text-align: left;
-}
-.contact input[type="text"], input[type="email"], textarea{
-    margin-bottom: 24px;
-    border: none;
-    width: 95%;
-    padding: 18px 30px;
-}
-
-input{
-    height: 64px;
-}
-
-.contact a{
-    text-decoration: none;
-}
-
-/* Smaller device */
-
-@media screen and (max-width: 576px) {
-    /* .header{
-        background-image: none;
-    }
-     */
-    nav,
-    nav ul,
-    .banner,
-    .skills-container,
-    .resume-content,
-    .about-info-container,
-    .contact{
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px 20px;
-    }
-    .about, .contact{
-        padding: 20px;
-    }
-    .contact input[type="text"], input[type="email"], textarea{
-       padding: 0px 0px 0px 10px; 
-    }
-
-    .banner{
-        padding-bottom: 0px;
-        margin: 0px;
-    }
-    .profile-pic{
-        width: 100% !important;
-        height: 100% !important;        
-    }
-    nav ul{
-        align-items: flex-start;
-        padding-left: 0px;
-    }
-    nav li{
-        margin-left: 0px;
-    }
-
-    .btn-txt{
-        font-size:14px;
-    }
-}
-
-/* Medium device */
-
-@media screen and (min-width:577px) and (max-width: 992px) {
-    .skills-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-    }
-    .about, .contact, .resume-content{
-        padding: 20px;
-    }
-    .contact input[type="text"], input[type="email"], textarea{
-        padding: 0px 0px 0px 10px; 
-     }
-    .banner, .contact{
-        flex-direction: column;
-     }
-     nav ul{
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-     }
+/* Optional: Fix for banner images if they don't show */
+.header-bg {
+  background-image: url("../images/munna.png"), url("../images/developer.png");
+  background-repeat: no-repeat;
+  background-position:
+    bottom right,
+    bottom left;
 }
