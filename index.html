@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muntasir Munna | Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Muntasir Munna - Professional Web Developer & UI/UX Designer portfolio. Expert in creating responsive websites and web applications."
+    />
+    <meta name="author" content="Muntasir Munna" />
+    <title>Muntasir Munna | Web Developer & UI/UX Designer</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Font Awesome 6 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -20,41 +28,19 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/portfolio.css" />
-    <!-- Custom config to match original styles -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#fd6e0a",
-              darkBg: "#fff8f3",
-              textGray: "#757575",
-              textDark: "#474747",
-            },
-            fontFamily: {
-              sans: ["Open Sans", "sans-serif"],
-            },
-            animation: {
-              fadeIn: "fadeIn 0.5s ease forwards",
-            },
-            keyframes: {
-              fadeIn: {
-                to: { opacity: "1" },
-              },
-            },
-          },
-        },
-      };
-    </script>
+
+    <!-- Tailwind Custom Config -->
+    <script src="scripts/tw.js"></script>
+    <!-- :::::::::::::::::::: -->
   </head>
   <body class="m-5 bg-white font-sans">
     <!-- Header -->
-    <header class="bg-darkBg rounded-b-2xl">
+    <header class="bg-orangeBg rounded-b-2xl header-bg">
       <!-- Navigation -->
       <nav
-        class="flex justify-between items-center px-10 lg:px-48 py-12 flex-wrap gap-5"
+        class="flex justify-between items-center px-6 md:px-10 lg:px-48 py-6 md:py-12 flex-wrap gap-5"
       >
-        <h2 class="font-black text-3xl lg:text-5xl">
+        <h2 class="font-black text-2xl md:text-3xl lg:text-5xl">
           <span class="text-red-600">M</span>u<span class="text-green-500"
             >n</span
           >n<span class="text-blue-500">a</span>
@@ -62,24 +48,38 @@
             >a</span
           >tio<span class="text-green-500">n</span>
         </h2>
-        <ul class="flex gap-8 lg:gap-12 items-center">
+        <ul class="flex gap-6 lg:gap-12 items-center flex-wrap justify-center">
           <li>
             <a
-              href="#"
-              class="font-semibold text-[#1e2a3a] hover:text-primary transition"
-              >Portfolio</a
+              href="#about"
+              class="font-semibold text-[#1e2a3a] hover:text-primary transition duration-300"
+              >About</a
             >
           </li>
           <li>
             <a
-              href="#"
-              class="font-semibold text-[#1e2a3a] hover:text-primary transition"
-              >Blog</a
+              href="#skills"
+              class="font-semibold text-[#1e2a3a] hover:text-primary transition duration-300"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#resume"
+              class="font-semibold text-[#1e2a3a] hover:text-primary transition duration-300"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="font-semibold text-[#1e2a3a] hover:text-primary transition duration-300"
+              >Contact</a
             >
           </li>
           <li>
             <button
-              class="bg-primary text-white px-8 py-3 rounded-md font-bold hover:bg-orange-600 transition"
+              class="bg-primary text-white px-6 py-2 lg:px-8 lg:py-3 rounded-md font-bold hover:bg-orange-600 transition duration-300 shadow-md hover:shadow-lg"
             >
               Hire Me
             </button>
@@ -89,7 +89,7 @@
 
       <!-- Banner -->
       <div
-        class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-8 lg:gap-12 px-5 lg:px-48 py-10"
+        class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-8 lg:gap-12 px-6 md:px-10 lg:px-48 py-10 md:py-16"
         style="
           background-image:
             url(&quot;../images/munna.png&quot;),
@@ -98,19 +98,22 @@
           background-position:
             bottom right,
             bottom left;
+          background-size: auto, auto;
         "
       >
         <div>
-          <h3 class="font-semibold text-2xl md:text-5xl mb-3 md:mb-5">
+          <h3
+            class="font-semibold text-2xl md:text-4xl lg:text-5xl mb-3 md:mb-5 animate-fadeIn"
+          >
             Hi, I am
           </h3>
           <h1
-            class="font-bold text-4xl md:text-7xl xl:text-8xl leading-tight mb-4 md:mb-6 md:w-2/3"
+            class="font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-4 md:mb-6"
           >
             Muntasir Munna
           </h1>
           <p
-            class="text-green-500 md:text-textGray text-sm md:text-base lg:text-xl mt-48 md:mt-0 mb-6 lg:mb-8 text-justify leading-relaxed w-full md:w-1/2"
+            class="text-textGray text-sm md:text-base lg:text-lg mb-6 lg:mb-8 text-justify leading-relaxed max-w-2xl"
           >
             I'm a web developer with in-depth experience in UI/UX design. In a
             nutshell, I create websites that help organizations address business
@@ -118,27 +121,23 @@
             navigation and layout to a company's web hosting and security
             architecture.
           </p>
-          <div class="flex gap-4 items-center">
-            <div>
+          <div class="flex gap-4 items-center flex-wrap">
+            <button
+              class="bg-primary text-white px-5 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-md font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
+            >
+              <i class="fa-solid fa-download"></i> Download CV
+            </button>
+            <a
+              href="http://wa.me/+8801774085300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button
-                class="bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-md font-bold hover:bg-orange-600 transition flex items-center gap-2"
+                class="border bg-white border-primary text-primary px-5 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-md font-bold hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2"
               >
-                <i class="fa-solid fa-download"></i> Download CV
+                <i class="fa-solid fa-phone"></i> Contact
               </button>
-            </div>
-            <div>
-              <a
-                href="http://wa.me/+8801774085300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  class="border bg-white border-primary text-primary px-6 py-3 lg:px-8 lg:py-4 rounded-md font-bold hover:bg-primary hover:text-white transition flex items-center gap-2"
-                >
-                  <i class="fa-solid fa-phone"></i> Contact
-                </button>
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -147,11 +146,15 @@
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4">
       <!-- About Section -->
-      <section class="mt-16 lg:mt-32">
+      <section id="about" class="mt-16 lg:mt-32">
         <div
-          class="bg-darkBg rounded-xl text-center py-12 px-5 lg:py-32 lg:px-36"
+          class="bg-orangeBg rounded-xl text-center py-12 px-5 md:py-20 lg:py-32 lg:px-36"
         >
-          <h3 class="text-3xl lg:text-4xl font-bold mb-8">About Me</h3>
+          <h3
+            class="text-3xl lg:text-4xl font-bold mb-8 relative inline-block underline decoration-primary"
+          >
+            About Me
+          </h3>
           <p class="text-textGray max-w-3xl mx-auto mb-10 leading-relaxed">
             I'm a designer & developer with a passion for web design. I enjoy
             developing simple, clean and slick websites that provide real value
@@ -159,25 +162,31 @@
             results while working with me. Delivering work within time and
             budget which meets clients requirements in our mata.
           </p>
-          <div class="flex flex-wrap justify-around gap-8">
+          <div
+            class="grid grid-cols-2 md:flex md:flex-wrap justify-around gap-6 md:gap-8"
+          >
             <div>
-              <p class="text-textGray">Name:</p>
-              <p class="font-bold text-xl text-textDark">Muntasir Munna</p>
-            </div>
-            <div>
-              <p class="text-textGray">Email:</p>
-              <p class="font-bold text-xl text-textDark">
-                munna112ru@gmail.com
+              <p class="text-textGray text-sm md:text-base">Name:</p>
+              <p class="font-bold text-base md:text-xl text-textDark">
+                Muntasir Munna
               </p>
             </div>
             <div>
-              <p class="text-textGray">Speciality:</p>
-              <p class="font-bold text-xl text-textDark">Web Dev</p>
+              <p class="text-textGray text-sm md:text-base">Email:</p>
+              <p class="font-bold text-base md:text-xl text-textDark break-all">
+                <a href="mailto:munna112ru@gmail.com">munna112ru@gmail.com</a>
+              </p>
             </div>
             <div>
-              <p class="text-textGray">Location:</p>
-              <p class="font-bold text-xl text-textDark">
-                Rajshahi, Bangladesh
+              <p class="text-textGray text-sm md:text-base">Speciality:</p>
+              <p class="font-bold text-base md:text-xl text-textDark">
+                Web Dev
+              </p>
+            </div>
+            <div>
+              <p class="text-textGray text-sm md:text-base">Location:</p>
+              <p class="font-bold text-base md:text-xl text-textDark">
+                Dhaka, Bangladesh
               </p>
             </div>
           </div>
@@ -185,161 +194,200 @@
       </section>
 
       <!-- What I Do Section -->
-      <section class="mt-16 lg:mt-32">
-        <h3 class="text-3xl lg:text-4xl font-bold text-center mb-12">
+      <section id="skills" class="mt-16 lg:mt-32">
+        <h3
+          class="text-3xl lg:text-4xl font-bold text-center mb-12 relative underline decoration-primary"
+        >
           What I Do
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Skill Card 1 -->
           <div
-            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 skill-card flex flex-col h-full"
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-6 md:p-8 skill-card flex flex-col h-full"
           >
             <img
               src="images/icons/js.png"
-              class="w-12 h-12 object-contain"
+              class="w-10 h-10 md:w-12 md:h-12 object-contain"
               alt="JavaScript"
             />
-            <p class="font-bold text-xl mt-6 mb-4">Vanilla JavaScript</p>
-            <p class="text-textGray text-justify leading-relaxed flex-1">
-              Vanilla JS Vanillin. Vanilla JS is a fast, lightweight,
-              cross-platform framework for building incredible, powerful
-              JavaScript applications.
+            <p class="font-bold text-lg md:text-xl mt-5 md:mt-6 mb-3 md:mb-4">
+              Vanilla JavaScript
+            </p>
+            <p
+              class="text-textGray text-sm md:text-base text-justify leading-relaxed flex-1"
+            >
+              Vanilla JS is a fast, lightweight, cross-platform framework for
+              building incredible, powerful JavaScript applications.
             </p>
           </div>
-
+          <!-- Skill Card 2 -->
           <div
-            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 skill-card flex flex-col h-full"
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-6 md:p-8 skill-card flex flex-col h-full"
           >
             <img
               src="images/icons/react.png"
-              class="w-12 h-12 object-contain"
+              class="w-10 h-10 md:w-12 md:h-12 object-contain"
               alt="React"
             />
-            <p class="font-bold text-xl mt-6 mb-4">React</p>
-            <p class="text-textGray text-justify leading-relaxed flex-1">
+            <p class="font-bold text-lg md:text-xl mt-5 md:mt-6 mb-3 md:mb-4">
+              React
+            </p>
+            <p
+              class="text-textGray text-sm md:text-base text-justify leading-relaxed flex-1"
+            >
               React is a free and open-source front-end JavaScript library for
-              building user interfaces based on UI components. It is maintained
-              by Meta and a community of individual developers and companies.
+              building user interfaces based on UI components. Maintained by
+              Meta.
             </p>
           </div>
-
+          <!-- Skill Card 3 -->
           <div
-            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 skill-card flex flex-col h-full"
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-6 md:p-8 skill-card flex flex-col h-full"
           >
             <img
               src="images/icons/nodejs.png"
-              class="w-12 h-12 object-contain"
+              class="w-10 h-10 md:w-12 md:h-12 object-contain"
               alt="Node.js"
             />
-            <p class="font-bold text-xl mt-6 mb-4">Node.js</p>
-            <p class="text-textGray text-justify leading-relaxed flex-1">
+            <p class="font-bold text-lg md:text-xl mt-5 md:mt-6 mb-3 md:mb-4">
+              Node.js
+            </p>
+            <p
+              class="text-textGray text-sm md:text-base text-justify leading-relaxed flex-1"
+            >
               Node.js is a cross-platform, open-source server environment that
-              can run on Windows, Linux, Unix, macOS, and more. Node.js is a
-              back-end JavaScript runtime environment, runs on the V8 JavaScript
-              Engine, and executes JavaScript code outside a web browser.
+              runs on the V8 JavaScript Engine and executes code outside a web
+              browser.
             </p>
           </div>
-
+          <!-- Skill Card 4 -->
           <div
-            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 skill-card flex flex-col h-full"
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-6 md:p-8 skill-card flex flex-col h-full"
           >
             <img
               src="images/icons/mongo.png"
-              class="w-12 h-12 object-contain"
+              class="w-10 h-10 md:w-12 md:h-12 object-contain"
               alt="MongoDB"
             />
-            <p class="font-bold text-xl mt-6 mb-4">MongoDB</p>
-            <p class="text-textGray text-justify leading-relaxed flex-1">
-              MongoDB is a source-available cross-platform document-oriented
-              database program. Classified as a NoSQL database program, MongoDB
-              uses JSON-like documents with optional schemas. MongoDB is
-              developed by MongoDB Inc.
+            <p class="font-bold text-lg md:text-xl mt-5 md:mt-6 mb-3 md:mb-4">
+              MongoDB
+            </p>
+            <p
+              class="text-textGray text-sm md:text-base text-justify leading-relaxed flex-1"
+            >
+              MongoDB is a document-oriented NoSQL database program that uses
+              JSON-like documents with optional schemas.
             </p>
           </div>
         </div>
       </section>
 
       <!-- Resume Section -->
-      <section class="mt-16 lg:mt-32 bg-darkBg rounded-xl py-12 lg:py-32 px-5">
-        <h3 class="text-3xl lg:text-4xl font-bold text-center mb-12">
+      <section
+        id="resume"
+        class="mt-16 lg:mt-32 bg-orangeBg rounded-xl py-12 md:py-20 lg:py-32 px-5 md:px-8 lg:px-12"
+      >
+        <h3
+          class="text-3xl lg:text-4xl font-bold text-center mb-12 relative underline decoration-primary"
+        >
           A summary of My Resume
         </h3>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
           <!-- Education Column -->
-          <div>
+          <div
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 resume-card flex flex-col h-full"
+          >
             <h3
               class="text-2xl lg:text-3xl font-bold text-center underline decoration-primary decoration-wavy underline-offset-8 mb-10"
             >
               My Education
             </h3>
 
-            <div class="mb-8">
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item mb-8 group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 Master in Mathematics
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-calendar-alt mr-2 text-sm"></i>
                 University of Rajshahi / 2025 - 2026
               </h5>
-              <p class="text-textGray">
+              <p class="text-textGray leading-relaxed">
                 Advanced studies in mathematical modeling and computational
                 methods.
               </p>
             </div>
             <hr class="my-6 border-gray-200" />
 
-            <div class="mb-8">
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item mb-8 group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 Hon's in Mathematics
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-calendar-alt mr-2 text-sm"></i>
                 University of Rajshahi / 2018 - 2019
               </h5>
-              <p class="text-textGray">
+              <p class="text-textGray leading-relaxed">
                 Comprehensive study of pure and applied mathematics.
               </p>
             </div>
             <hr class="my-6 border-gray-200" />
 
-            <div class="mb-8">
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item mb-8 group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 HSC in Science
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-calendar-alt mr-2 text-sm"></i>
                 CPSC, BUSMS (Dinajpur Board) / 2017
               </h5>
-              <p class="text-textGray">
+              <p class="text-textGray leading-relaxed">
                 Higher Secondary Certificate with Physics, Chemistry,
                 Mathematics.
               </p>
             </div>
             <hr class="my-6 border-gray-200" />
 
-            <div>
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 SSC in Science
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-calendar-alt mr-2 text-sm"></i>
                 KGHSK (Dinajpur Board) / 2015
               </h5>
-              <p class="text-textGray">
+              <p class="text-textGray leading-relaxed">
                 Secondary School Certificate with distinction in Science.
               </p>
             </div>
           </div>
 
           <!-- Experience Column -->
-          <div>
+          <div
+            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-xl p-8 resume-card flex flex-col h-full"
+          >
             <h3
               class="text-2xl lg:text-3xl font-bold text-center underline decoration-primary decoration-wavy underline-offset-8 mb-10"
             >
               My Experience
             </h3>
 
-            <div class="mb-8">
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item mb-8 group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 Senior Web Developer
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-building mr-2 text-sm"></i>
                 Tech Solutions Ltd / 2023 - Present
               </h5>
               <p class="text-textGray leading-relaxed">
@@ -349,11 +397,14 @@
             </div>
             <hr class="my-6 border-gray-200" />
 
-            <div class="mb-8">
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item mb-8 group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 UI/UX Designer
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-regular fa-building mr-2 text-sm"></i>
                 Creative Agency / 2021 - 2023
               </h5>
               <p class="text-textGray leading-relaxed">
@@ -363,11 +414,14 @@
             </div>
             <hr class="my-6 border-gray-200" />
 
-            <div>
-              <h4 class="font-bold text-xl lg:text-2xl text-textDark mb-2">
+            <div class="resume-item group">
+              <h4
+                class="font-bold text-xl lg:text-2xl text-textDark mb-2 group-hover:text-primary transition-colors duration-300"
+              >
                 Freelance Developer
               </h4>
               <h5 class="text-primary font-semibold text-base lg:text-lg mb-3">
+                <i class="fa-solid fa-laptop-code mr-2 text-sm"></i>
                 Self-employed / 2019 - Present
               </h5>
               <p class="text-textGray leading-relaxed">
@@ -380,7 +434,7 @@
 
         <div class="text-center mt-12 lg:mt-16">
           <button
-            class="bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-orange-600 transition inline-flex items-center gap-2"
+            class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-md font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2 shadow-md hover:shadow-lg"
           >
             <i class="fa-solid fa-download"></i> Download CV
           </button>
@@ -390,79 +444,215 @@
 
     <!-- Contact Section -->
     <section
-      class="bg-darkBg grid grid-cols-1 lg:grid-cols-2 gap-12 px-5 py-12 lg:px-36 lg:py-20 mt-16 lg:mt-32"
+      id="contact"
+      class="bg-orangeBg grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-5 py-12 lg:px-36 lg:py-20 mt-16 lg:mt-32"
     >
       <!-- Contact Info -->
       <div>
-        <h3 class="text-3xl lg:text-4xl font-bold mb-6 text-left">
+        <h3
+          class="text-3xl lg:text-4xl font-bold mb-6 text-left relative inline-block underline decoration-primary"
+        >
           Let's Connect
         </h3>
         <p class="text-textGray mb-8 leading-relaxed">
           Please fill out the form on this section to contact with me or call
-          between 9:00 A.M and 8.00 P.M (GMT+6), Monday through Friday.
+          between <strong> 9:00 A.M and 8.00 P.M (GMT+6)</strong>, Monday
+          through Friday.
         </p>
         <div class="flex gap-5">
           <a
             href="https://www.facebook.com/muntasir.smm/"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-link"
           >
-            <img src="images/icons/facebook.png" class="w-8" alt="Facebook" />
+            <img
+              src="images/icons/facebook.png"
+              class="w-7 md:w-8"
+              alt="Facebook"
+            />
           </a>
           <a
             href="https://twitter.com/muntasir_smm"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-link"
           >
-            <img src="images/icons/twitter.png" class="w-8" alt="Twitter" />
+            <img
+              src="images/icons/twitter.png"
+              class="w-7 md:w-8"
+              alt="Twitter"
+            />
           </a>
           <a
             href="https://www.instagram.com/muntasir_smm"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-link"
           >
-            <img src="images/icons/insta.png" class="w-8" alt="Instagram" />
+            <img
+              src="images/icons/insta.png"
+              class="w-7 md:w-8"
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://github.com/muntasir-smm"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <img
+              src="images/icons/github.png"
+              class="w-7 md:w-8"
+              alt="GitHub"
+            />
           </a>
         </div>
       </div>
 
       <!-- Contact Form -->
       <div>
-        <h3 class="text-3xl lg:text-4xl font-bold mb-6">Let's Message Me</h3>
+        <h3 class="text-3xl lg:text-4xl font-bold mb-6">Message Me</h3>
         <form action="#" method="POST">
           <input
             type="text"
             name="name"
             placeholder="Your name"
             required
-            class="w-full p-5 rounded-md mb-6 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full p-4 md:p-5 rounded-md mb-5 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            class="w-full p-5 rounded-md mb-6 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full p-4 md:p-5 rounded-md mb-5 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
           />
           <textarea
             name="message"
-            rows="6"
+            rows="5"
             placeholder="Message"
             required
-            class="w-full p-5 rounded-md mb-6 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary resize-vertical"
+            class="w-full p-4 md:p-5 rounded-md mb-5 border-none bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 resize-vertical"
           ></textarea>
           <input
             type="submit"
-            value="Submit"
-            class="bg-primary text-white px-8 py-4 rounded-md font-bold cursor-pointer hover:bg-orange-600 transition border-none"
+            value="Send Message"
+            class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-md font-bold cursor-pointer hover:bg-orange-600 hover:scale-105 transition-all duration-300 border-none shadow-md hover:shadow-lg"
           />
         </form>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-10 text-textGray bg-darkBg mt-0">
-      <p>&copy; 2025 Muntasir Munna. All rights reserved.</p>
+    <footer class="text-center py-10 text-textGray bg-orangeBg mt-0 relative">
+      <!-- Back to Top Button -->
+      <button
+        id="backToTop"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-6 right-6 bg-primary text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:bg-orange-600 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer flex items-center justify-center opacity-0 invisible z-50"
+        aria-label="Back to top"
+      >
+        <i class="fas fa-arrow-up text-sm md:text-base"></i>
+      </button>
+
+      <div class="max-w-6xl mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8"
+        >
+          <div class="text-sm">
+            <p class="font-semibold text-textDark">Muntasir Munna</p>
+            <p class="text-textGray">Web Developer & UI/UX Designer</p>
+          </div>
+
+          <div class="flex gap-6 md:gap-8 flex-wrap justify-center">
+            <a href="#about" class="hover:text-primary transition text-sm"
+              >About</a
+            >
+            <a href="#skills" class="hover:text-primary transition text-sm"
+              >Skills</a
+            >
+            <a href="#resume" class="hover:text-primary transition text-sm"
+              >Resume</a
+            >
+            <a href="#contact" class="hover:text-primary transition text-sm"
+              >Contact</a
+            >
+          </div>
+
+          <div class="flex gap-4 md:gap-5">
+            <a
+              href="https://www.facebook.com/muntasir.smm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-textGray hover:text-primary transition text-base md:text-lg"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://twitter.com/muntasir_smm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-textGray hover:text-primary transition text-base md:text-lg"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/muntasir_smm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-textGray hover:text-primary transition text-base md:text-lg"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/muntasir-smm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-textGray hover:text-primary transition text-base md:text-lg"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-6">
+          <p class="text-xs md:text-sm">
+            &copy; 2025 Muntasir Munna. All rights reserved.
+          </p>
+          <p class="text-xs mt-2 text-textGray/70">
+            Built with <i class="fas fa-heart text-primary"></i> using Tailwind
+            CSS
+          </p>
+        </div>
+      </div>
     </footer>
+
+    <!-- Back to Top Button Script -->
+    <script>
+      const backToTopBtn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove("opacity-0", "invisible");
+          backToTopBtn.classList.add("opacity-100", "visible");
+        } else {
+          backToTopBtn.classList.remove("opacity-100", "visible");
+          backToTopBtn.classList.add("opacity-0", "invisible");
+        }
+      });
+
+      // Smooth scroll for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,22 +1,30 @@
-/* Custom styles that Tailwind doesn't cover */
+/* ============================================
+   CUSTOM STYLES THAT TAILWIND DOESN'T COVER
+   ============================================ */
 
 /* Skill card hover effects */
-.skill-card {
+.skill-card,
+.resume-card {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.skill-card:hover {
+.skill-card:hover,
+.resume-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 20px 40px #0000001f;
 }
 
 /* Social links hover effect */
 .social-link {
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  display: inline-block;
 }
 .social-link:hover {
   transform: translateY(-3px);
+  opacity: 0.8;
 }
 
 /* Smooth scroll for the whole page */
@@ -24,11 +32,58 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Fix for banner images if they don't show */
-.header-bg {
-  background-image: url("../images/munna.png"), url("../images/developer.png");
-  background-repeat: no-repeat;
-  background-position:
-    bottom right,
-    bottom left;
+/* Resume item hover effect */
+.resume-item {
+  transition: all 0.3s ease;
+}
+.resume-item:hover {
+  transform: translateX(5px);
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Fade in animation for images */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fd6e0a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e05a00;
+}
+
+/* Form input focus glow */
+input:focus,
+textarea:focus {
+  outline: none;
 }
